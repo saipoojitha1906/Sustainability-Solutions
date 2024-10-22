@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Energy Management - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css"> <!-- Link to your CSS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+</head>
+<body>
+    <header>
+        <div class="logo">Energy Tomorrow</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="usage.html">Usage</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Dashboard</h1>
+        <p>Monitor your energy consumption here.</p>
+    </section>
+
+    <!-- Energy Consumption Section with Bar Graph -->
+    <section class="energy-consumption">
+        <h2>Energy Consumption Overview</h2>
+        <canvas id="energyChart" width="400" height="200"></canvas>
+    </section>
+
+    <footer>
+        <p>© 2024 Energy Tomorrow. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample data for the chart
+        const labels = ['Total Energy Used', 'Current Month', 'Previous Month'];
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Energy Consumption (kWh)',
+                data: [150, 80, 70], // Sample energy values
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Render the chart
+        const energyChart = new Chart(
+            document.getElementById('energyChart'),
+            config
+        );
+    </script>
+</body>
+</html>

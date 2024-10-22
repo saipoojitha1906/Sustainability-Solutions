@@ -1,0 +1,103 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background for a clean look */
+    color: #333; /* Dark text color for better readability */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50; /* Darker blue-gray header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c; /* Green hover background */
+    color: #000000; /* Black text on hover */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #34495e; /* Dark gray-blue */
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ecf0f1; /* Light gray for the heading */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #bdc3c7; /* Muted gray for description */
+}
+
+/* Usage Graphs Section */
+.usage-graphs {
+    padding: 50px 20px;
+    background-color: #ecf0f1; /* Light gray background for graphs section */
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.usage-graphs h2 {
+    font-size: 2.5em;
+    color: #2c3e50; /* Darker text color for graph heading */
+    margin-bottom: 20px;
+}
+
+canvas {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50; /* Dark footer */
+    color: white; /* White text color */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}

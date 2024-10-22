@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Usage - Smart Energy Management</title>
+    <link rel="stylesheet" href="usage.css"> <!-- Separate CSS for Usage page -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
+</head>
+<body>
+    <header>
+        <div class="logo">Energy Tomorrow</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="usage.html">Usage</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Monthly Energy Usage</h1>
+        <p>Monitor your daily, weekly, and monthly energy consumption. Analyze how much power you've consumed and optimize your energy usage.</p>
+    </section>
+
+    <!-- Monthly Energy Graphs Section -->
+    <section class="usage-graphs">
+        <h2>Energy Consumption in kWh</h2>
+        <canvas id="monthlyEnergyChart" width="400" height="200"></canvas>
+    </section>
+
+    <footer>
+        <p>© 2024 Energy Tomorrow. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample data for monthly energy consumption graph
+        const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Monthly Energy Consumption (kWh)',
+                data: [120, 130, 140, 135, 150, 160, 170, 175, 180, 165, 155, 145], // Example monthly data
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const config = {
+            type: 'line', // Line chart for monthly energy consumption
+            data: data,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        const monthlyEnergyChart = new Chart(
+            document.getElementById('monthlyEnergyChart'),
+            config
+        );
+    </script>
+</body>
+</html>
